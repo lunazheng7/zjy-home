@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <title>ZJY | Gallery </title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles and Overrides -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Favicon - See also: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site -->
+
+  </head>
+  <body id="gallery" class="bg-light d-flex flex-column h-100">
+
+    <!-- Bootstrap Nav Bar here -->
+    <!-- https://getbootstrap.com/docs/5.0/components/navbar/ -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container mt-3">
+        <a id="wordmark" class="navbar-brand me-5 fs-4 fw-bolder text-secondary" href="index.html">ZJY | HOME</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mb-2 mb-lg-0 fs-5">
+            <li class="nav-item pe-3">
+              <a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item pe-3">
+              <a class="nav-link" href="productions.html">Productions</a>
+            </li>
+            <li class="nav-item pe-3">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item dropdown pe-3">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="about.html">About me</a></li>
+                <li><a class="dropdown-item" href="process.html">About this web</a></li>
+              </ul>
+            </li>
+            <li class="nav-item pe-3">
+              <a class="nav-link" href="contact.html">Contact me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+  <!-- Carousel goes here -->
+  <section class="container col-lg-10">
+    <div id="carouselGalleryCaptions" class="carousel slide mx-auto mt-3" data-bs-ride="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselGalleryCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselGalleryCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselGalleryCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/carousel00.jpeg" class="d-block w-100" alt="/">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Banff &amp; Japser Trip</h5>
+            <p>On the way to Pearson International Airport</p>
+            <p><a class="btn btn-lg bg-white" data-bs-toggle="modal" data-bs-target="#tripModal">Learn more</a></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/carousel01.jpeg" class="d-block w-100" alt="/">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Window View</h5>
+            <p>Window View in Mississauga</p>
+            <p><a class="btn btn-lg bg-white" data-bs-toggle="modal" data-bs-target="#windowModal">Learn more</a></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/carousel02.jpeg" class="d-block w-100" alt="/">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Chinese Cuisine</h5>
+            <p>Finding Delicious Chinese Cuisine in Tronto</p>
+            <p><a class="btn btn-lg bg-white" data-bs-toggle="modal" data-bs-target="#cuisineModal">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselGalleryCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselGalleryCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- "Jasper and banff trip" go here -->
+  <section class="container my-4 col-lg-10">
+    <div class="h3 mt-5 text-center">Banff &amp; Jasper Trip</div>
+    <div class="row g-4" data-bs-toggle="modal" data-bs-target="#tripModal">
+      <div class="col-6 col-md-4">
+        <img data-bs-target="#tripCarousel" data-bs-slide-to="0" src="img/trip/00.jpeg" class="d-block w-100" alt="Banff and Jasper trip">
+      </div>
+      <div class="col-6 col-md-4">
+        <img data-bs-target="#tripCarousel" data-bs-slide-to="1" src="img/trip/01.jpeg" class="d-block w-100" alt="Banff and Jasper trip">
+      </div>
+      <div class="col-6 col-md-4">
+        <img data-bs-target="#tripCarousel" data-bs-slide-to="2" src="img/trip/02.jpeg" class="d-block w-100" alt="Banff and Jasper trip">
+      </div>
+      <div class="col-6 col-md-4">
+        <img data-bs-target="#tripCarousel" data-bs-slide-to="3" src="img/trip/03.jpeg" class="d-block w-100" alt="Banff and Jasper trip">
+      </div>
+      <div class="col-6 col-md-4">
+        <img data-bs-target="#tripCarousel" data-bs-slide-to="4" src="img/trip/04.jpeg" class="d-block w-100" alt="Banff and Jasper trip">
+      </div>
+      <div class="col-6 col-md-4">
+        <img data-bs-target="#tripCarousel" data-bs-slide-to="5" src="img/trip/05.jpeg" class="d-block w-100" alt="Banff and Jasper trip">
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="tripModal" tabindex="-1" aria-labelledby="TripModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-md-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="TripModalLabel">Banff &amp; Jasper Trip</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <!-- Trip Carousel -->
+          <div id="tripCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#tripCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#tripCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#tripCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#tripCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#tripCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#tripCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/trip/00.jpeg" class="d-block w-100" alt="Banff and Jasper Trip">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="fw-bold">Mountain goat</h5>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <img src="img/trip/01.jpeg" class="d-block w-100" alt="Banff and Jasper Trip">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="fw-bold">Emerald Lake</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/trip/02.jpeg" class="d-block w-100" alt="Banff and Jasper Trip">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="fw-bold">Road to Jasper</h5>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <img src="img/trip/03.jpeg" class="d-block w-100" alt="Banff and Jasper Trip">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="fw-bold">Road to Calgary</h5>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <img src="img/trip/04.jpeg" class="d-block w-100" alt="Banff and Jasper Trip">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="fw-bold">A Chalet</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/trip/05.jpeg" class="d-block w-100" alt="Banff and Jasper Trip">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="fw-bold">Argali</h5>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#tripCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#tripCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-white" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Window view goes here-->
+  <section class="container my-4 col-lg-10">
+    <div class="h3 mt-5 text-center">Window View in Mississauga</div>
+    <div class="row g-4" data-bs-toggle="modal" data-bs-target="#windowModal">
+      <div class="col-6 col-md-4">
+        <img data-bs-target="#windowCarousel" data-bs-slide-to="0" src="img/window/00.jpeg" class="d-block w-100" alt="window view">
+      </div>
+      <div class="col-6 col-md-4">
+        <img data-bs-target="#windowCarousel" data-bs-slide-to="1" src="img/window/01.jpeg" class="d-block w-100" alt="window view">
+      </div>
+      <div class="col-6 col-md-4">
+        <img data-bs-target="#windowCarousel" data-bs-slide-to="2" src="img/window/02.jpeg" class="d-block w-100" alt="window view">
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="windowModal" tabindex="-1" aria-labelledby="WindowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-md-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="windowModalLabel">Window View in Mississauge</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <!-- Window Carousel -->
+          <div id="windowCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#windowCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#windowCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#windowCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/window/00.jpeg" class="d-block w-100" alt="Window View">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="fw-bold">Sunny days in Winter</h5>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <img src="img/window/01.jpeg" class="d-block w-100" alt="Window View">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="fw-bold">After Storm</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/window/02.jpeg" class="d-block w-100" alt="Window View">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="fw-bold">Sunset in Winter</h5>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#windowCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#windowCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-white" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chinese cuisine goes here -->
+  <section class="container my-4 col-lg-10">
+    <div class="h3 mt-5 text-center">Delicious Chinese Cuisine in Toronto</div>
+    <div class="row g-4" data-bs-toggle="modal" data-bs-target="#cuisineModal">
+      <div class="col-6 col-md-4">
+        <img data-bs-target="#cuisineCarousel" data-bs-slide-to="0" src="img/cuisine/00.jpeg" class="d-block w-100" alt="Banff and Jasper trip">
+      </div>
+      <div class="col-6 col-md-4">
+        <img data-bs-target="#cuisineCarousel" data-bs-slide-to="1" src="img/cuisine/01.jpeg" class="d-block w-100" alt="Banff and Jasper trip">
+      </div>
+      <div class="col-6 col-md-4">
+        <img data-bs-target="#cuisineCarousel" data-bs-slide-to="2" src="img/cuisine/02.jpeg" class="d-block w-100" alt="Banff and Jasper trip">
+      </div>
+      <div class="col-6 col-md-4">
+        <img data-bs-target="#cuisineCarousel" data-bs-slide-to="3" src="img/cuisine/03.jpeg" class="d-block w-100" alt="Banff and Jasper trip">
+      </div>
+      <div class="col-6 col-md-4">
+        <img data-bs-target="#cuisineCarousel" data-bs-slide-to="4" src="img/cuisine/04.jpeg" class="d-block w-100" alt="Banff and Jasper trip">
+      </div>
+      <div class="col-6 col-md-4">
+        <img data-bs-target="#cuisineCarousel" data-bs-slide-to="5" src="img/cuisine/05.jpeg" class="d-block w-100" alt="Banff and Jasper trip">
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="cuisineModal" tabindex="-1" aria-labelledby="TripModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-md-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="CuisineModalLabel">Delicious Chinese Cuisine</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           <!-- Trip Carousel -->
+          <div id="cuisineCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#cuisineCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#cuisineCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#cuisineCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#cuisineCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#cuisineCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#cuisineCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/cuisine/00.jpeg" class="d-block w-100" alt="Chinese Cuisine">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="fw-bold">Guilin Rice Noodle</h5>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <img src="img/cuisine/01.jpeg" class="d-block w-100" alt="Chinese Cuisine">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="fw-bold">Jyu Cheung Fan</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/cuisine/02.jpeg" class="d-block w-100" alt="Chinese Cuisine">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="fw-bold">Yum Cha</h5>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <img src="img/cuisine/03.jpeg" class="d-block w-100" alt="Chinese Cuisine">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="fw-bold">Stew</h5>
+                </div>
+              </div>
+              <div class="carousel-item ">
+                <img src="img/cuisine/04.jpeg" class="d-block w-100" alt="Chinese Cuisine">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="fw-bold">Barbecue Chilled Noodles</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/cuisine/05.jpeg" class="d-block w-100" alt="Chinese Cuisine">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="fw-bold">Yunnan Style Rice Noodle</h5>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#cuisineCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#cuisineCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-white" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--  Sticky Footer https://getbootstrap.com/docs/5.0/examples/sticky-footer/ -->
+   <!-- Also Note the classes on the html and body tags -->
+  <footer class="footer mt-auto pt-3 bg-light">
+    <p class="fw-bold text-center fw-bold text-nowrap">©2022 by Jingyue Zheng
+      <span class="facebook mx-2">
+  			<a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+  				width="24" height="24" viewBox="0 0 24 24"	style=" fill:#000000;"><path d="M 12 2 C 6.4889971 2 2 6.4889971 2 12 C 2 17.511003 6.4889971 22 12 22 C 17.511003 22 22 17.511003 22 12 C 22 6.4889971 17.511003 2 12 2 z M 12 4 C 16.430123 4 20 7.5698774 20 12 C 20 16.014467 17.065322 19.313017 13.21875 19.898438 L 13.21875 14.384766 L 15.546875 14.384766 L 15.912109 12.019531 L 13.21875 12.019531 L 13.21875 10.726562 C 13.21875 9.7435625 13.538984 8.8710938 14.458984 8.8710938 L 15.935547 8.8710938 L 15.935547 6.8066406 C 15.675547 6.7716406 15.126844 6.6953125 14.089844 6.6953125 C 11.923844 6.6953125 10.654297 7.8393125 10.654297 10.445312 L 10.654297 12.019531 L 8.4277344 12.019531 L 8.4277344 14.384766 L 10.654297 14.384766 L 10.654297 19.878906 C 6.8702905 19.240845 4 15.970237 4 12 C 4 7.5698774 7.5698774 4 12 4 z"></path></svg></a>
+  		</span>
+  		<span class="ins me-2">
+  			<a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+  				width="24" height="24" viewBox="0 0 24 24" style=" fill:#000000;"><path d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"></path></svg></a>
+  		</span>
+  		<span class="twitter me-2">
+  			<a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+  				width="24" height="24" viewBox="0 0 24 24"style=" fill:#000000;"><path d="M22,3.999c-0.78,0.463-2.345,1.094-3.265,1.276c-0.027,0.007-0.049,0.016-0.075,0.023c-0.813-0.802-1.927-1.299-3.16-1.299 c-2.485,0-4.5,2.015-4.5,4.5c0,0.131-0.011,0.372,0,0.5c-3.353,0-5.905-1.756-7.735-4c-0.199,0.5-0.286,1.29-0.286,2.032 c0,1.401,1.095,2.777,2.8,3.63c-0.314,0.081-0.66,0.139-1.02,0.139c-0.581,0-1.196-0.153-1.759-0.617c0,0.017,0,0.033,0,0.051 c0,1.958,2.078,3.291,3.926,3.662c-0.375,0.221-1.131,0.243-1.5,0.243c-0.26,0-1.18-0.119-1.426-0.165 c0.514,1.605,2.368,2.507,4.135,2.539c-1.382,1.084-2.341,1.486-5.171,1.486H2C3.788,19.145,6.065,20,8.347,20 C15.777,20,20,14.337,20,8.999c0-0.086-0.002-0.266-0.005-0.447C19.995,8.534,20,8.517,20,8.499c0-0.027-0.008-0.053-0.008-0.08 c-0.003-0.136-0.006-0.263-0.009-0.329c0.79-0.57,1.475-1.281,2.017-2.091c-0.725,0.322-1.503,0.538-2.32,0.636 C20.514,6.135,21.699,4.943,22,3.999z M18,8.999c0,4.08-2.957,8.399-8.466,8.943C10.28,17.413,11,16.662,11,16.662 S8,14,7.775,10.522C8.81,10.838,9.888,10.999,11,10.999h2v-2.5c0-0.001,0-0.001,0-0.001C13.002,7.118,14.12,6,15.5,6 C16.881,6,18,7.119,18,8.5C18,8.5,18,8.92,18,8.999z"></path></svg></a>
+  		</span>
+    </p>
+  </footer>
+
+
+
+    <!-- Bootstrap Javascript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+  </body>
+</html>

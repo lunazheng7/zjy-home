@@ -1,0 +1,35 @@
+/* Bootstrap simplifies our workflow, but it's still helpful to add our own CSS */
+/* This file will include CSS to override Bootstrap defaults */
+body{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Typography */
+.nav-link:hover{
+  text-decoration: underline;
+}
+
+#productions .subtitle{
+  color: white;
+  animation-name: subtitle;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes subtitle {
+  0%   {color: white;}
+  25%  {color: #999999;}
+  50%  {color: #666666;}
+  100% {color: white;}
+}
+/* Background */
+
+#blog #blogTitle{
+  background-image: url("../img/blog/blog.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+}
+
+#blog #blogTitle h1{
+  font-family: 'Lora', serif;
+}
